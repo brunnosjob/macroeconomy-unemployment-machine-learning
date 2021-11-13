@@ -49,12 +49,9 @@ st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
 st.header('Bem-vindo à 4Economy')
 st.subheader('Uma aplicação web de machine learning voltada para a macroeconomia')
 st.markdown(' ')
-#Nome do usuário
-user = st.text_input('#### Insira seu nome para que eu possa tratar você pelo seu nome e amigavelmente:')
-st.markdown(' ')
 
 #Explicações
-st.markdown('### {}, como você pode experimentar e usar essa aplicação:'.format(user))
+st.markdown('### Como você pode experimentar e usar essa aplicação:')
 st.markdown('''1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
 Esse valor está em porcentagem. Ele representa, em termos percentuais,
 o quanto do PIB de um país está comprometido com a dívida pública desse país;
