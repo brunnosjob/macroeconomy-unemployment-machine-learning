@@ -50,7 +50,7 @@ st.header('Bem-vindo à 4Economy')
 st.subheader('Uma aplicação web de machine learning voltada para a macroeconomia')
 st.markdown(' ')
 #Nome do usuário
-user = st.text_input('Insira seu nome para que eu possa tratar você pelo seu nome e amigavelmente:')
+user = st.text_input('#### Insira seu nome para que eu possa tratar você pelo seu nome e amigavelmente:')
 st.markdown(' ')
 
 #Explicações
