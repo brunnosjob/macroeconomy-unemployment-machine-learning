@@ -105,4 +105,4 @@ taxa = unemployment/100
 
 st.write('País:', pais)
 st.write('A taxa de desemprego está em torno de {}%.'.format(unemployment))
-st.write('Aproximação do total de desempregado do país:', (pop * taxa))
+st.write('Aproximação do total de desempregado do país:', round((pop * taxa),0))
