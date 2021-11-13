@@ -102,7 +102,8 @@ X_log = X_log.reshape(-1,1)
 unemployment = regressor_sim_log.predict(X_log)
 unemployment = np.round(unemployment, 3)
 taxa = unemployment/100
+desempregado = np.unique(pop * taxa, 0)
 
 st.write('País:', pais)
 st.write('A taxa de desemprego está em torno de {}%.'.format(unemployment))
-st.write('Aproximação do total de desempregado do país:', round((pop * taxa),0))
+st.write('Aproximação do total de desempregado do país:', desempregado)
