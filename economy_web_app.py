@@ -85,7 +85,7 @@ with open('unemployment_simple_lm.pkl', 'rb') as f:
 pais = st.text_input('Insira o nome do pais:')
 
 #População
-pop = st.number_input('Insira a população do país:')
+pop = st.number_input('Insira a população do país:'0, 8000000000, 0)
 
 #Valor percentual da dívida pública
 public_debt = st.number_input('Insira o percentual (%) do PIB comprometido com a dívida pública:', 0.0, 100.0, 0.0)
@@ -102,7 +102,7 @@ X_log = X_log.reshape(-1,1)
 unemployment = regressor_sim_log.predict(X_log)
 unemployment = np.round(unemployment, 3)
 taxa = unemployment/100
-desempregado = np.unique((pop * taxa))
+desempregado = (pop * taxa)
 
 st.write('País:', pais)
 st.write('A taxa de desemprego está em torno de {}%.'.format(unemployment))
