@@ -85,7 +85,7 @@ with open('unemployment_simple_lm.pkl', 'rb') as f:
 pais = st.text_input('Insira o nome do pais:')
 
 #População
-pop = st.number_input('Insira a população do país:'0, 8000000000, 0)
+pop = st.number_input('Insira a população do país:', 0, 8000000000, 0)
 
 #Valor percentual da dívida pública
 public_debt = st.number_input('Insira o percentual (%) do PIB comprometido com a dívida pública:', 0.0, 100.0, 0.0)
