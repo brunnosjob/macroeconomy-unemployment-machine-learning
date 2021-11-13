@@ -19,9 +19,6 @@ with open('unemployment_simple_lm.pkl', 'rb') as f:
     regressor_sim_log = pickle.load(f)
 
 
-# In[49]:
-
-
 #Construindo Web App
 #Criando sidebar
 #Orientando visão
@@ -107,4 +104,3 @@ unemployment = np.round(unemployment, 2)
 
 st.write('País:', pais)
 st.write('A taxa de desemprego está em {}%.'.format(unemployment))
-
