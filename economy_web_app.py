@@ -1,0 +1,116 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[5]:
+
+
+#Importando as bibliotecas
+import numpy as np
+import pandas as pd
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.linear_model import LinearRegression
+import streamlit as st
+import pickle
+
+
+# In[6]:
+
+
+#Buscando modelo de previsão de Saúde Fiscal
+with open('simple_health_fiscal_tree.pkl', 'rb') as f:
+    tree_model_fiscal = pickle.load(f)
+    
+#Buscando modelo de previsão de taxa de desemprego
+with open('unemployment_simple_lm.pkl', 'rb') as f:
+    regressor_sim_log = pickle.load(f)
+
+
+# In[49]:
+
+
+#Construindo Web App
+#Criando sidebar
+#Orientando visão
+st.markdown('*__Observação: para mais informações acerca do projeto, clique na seta no canto esquerdo superior da tela__*')
+st.markdown(' ')
+
+#Informações em sidebar
+#Sobre o artigo
+st.sidebar.subheader('Projeto de portfólio de Ciência de Dados')
+st.sidebar.markdown('Em breve haverá o artigo descrevendo o passo a passo do desenvolvimento do projeto. Aguarde!')
+st.sidebar.markdown(' ')
+
+#Menu
+st.sidebar.title('Menu')
+st.sidebar.markdown('Em breve haverá mais páginas com ricas informações. Aguarde!')
+st.sidebar.markdown(' ')
+
+#Redes sociais
+st.sidebar.markdown('Feito por : Bruno Rodrigues Carloto')
+
+st.sidebar.markdown("Redes Sociais :")
+st.sidebar.markdown("- [Linkedin](https://www.linkedin.com/in/bruno-rodrigues-carloto)")
+st.sidebar.markdown("- [Medium](https://br-cienciadedados.medium.com)")
+st.sidebar.markdown("- [Github](https://github.com/brunnosjob)")
+
+#Criação da página de interação com o(s) modelo(s)
+#Boas-vindas
+st.header('Bem-vindo à 4Economy')
+st.subheader('Uma aplicação web de machine learning voltada para a macroeconomia')
+st.markdown(' ')
+#Nome do usuário
+user = st.text_input('Insira seu nome para que eu possa tratar você pelo seu nome e amigavelmente:')
+st.markdown(' ')
+
+#Explicações
+st.markdown('### {}, como você pode experimentar e usar essa aplicação:'.format(user))
+st.markdown('''1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
+Esse valor está em porcentagem. Ele representa, em termos percentuais,
+o quanto do PIB de um país está comprometido com a dívida pública desse país;
+
+2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
+
+2 - Você pode realizar uma pesquisa e usar dados reais:
+
+I - Escolha um país;
+
+II - Pesquise sobre o quanto do PIB desse país está comprometido com sua dívida pública.
+O valor deve estar em porcentagem, quando for colocado no espaço de preenchimento, presente logo abaixo.
+
+III - Compare o resultado da predição acerca da taxa de desemprego com o valor real da taxa de desemprego
+desse país.
+
+3 - Você pode repetir o processo inúmeras vezes, inclusive, usar para algum trabalho ou projeto.''')
+st.markdown(' ')
+
+#Buscando modelo de predição de saúde fiscal
+with open('simple_health_fiscal_tree.pkl', 'rb') as f:
+    tree_model_fiscal = pickle.load(f)
+    
+#Buscando modelo de previsão de taxa de desemprego
+with open('unemployment_simple_lm.pkl', 'rb') as f:
+    regressor_sim_log = pickle.load(f)
+
+#Aplicação dos modelos
+#Predição de saúde fiscal
+#Nome do país
+pais = st.text_input('Insira o nome do pais:')
+
+#Valor percentual da dívida pública
+public_debt = st.number_input('Insira o percentual (%) do PIB comprometido com a dívida pública:', 0.0, 1000.0, 0.0)
+
+#Transformações e predição
+debt = np.array(public_debt)
+debt = debt.reshape(-1,1)
+predicted_health_fiscal = tree_model_fiscal.predict(debt)
+
+#Predição de taxa de desemprego
+#Transformações e predição
+X_log = np.log(predicted_health_fiscal)
+X_log = X_log.reshape(-1,1)
+unemployment = regressor_sim_log.predict(X_log)
+unemployment = np.round(unemployment, 2)
+
+st.write('País:', pais)
+st.write('A taxa de desemprego está em {}%.'.format(unemployment))
+
