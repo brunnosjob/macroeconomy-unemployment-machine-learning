@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
-
-
 #Importando as bibliotecas
 import numpy as np
 import pandas as pd
@@ -11,9 +8,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 import streamlit as st
 import pickle
-
-
-# In[6]:
 
 
 #Buscando modelo de previsão de Saúde Fiscal
