@@ -56,7 +56,7 @@ st.markdown('''1 - Você deve preencher o espaço com um valor percentual de 0 a
 Esse valor está em porcentagem. Ele representa, em termos percentuais,
 o quanto do PIB de um país está comprometido com a dívida pública desse país;
 
-2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
+1 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
 
 2 - Você pode realizar uma pesquisa e usar dados reais:
 
