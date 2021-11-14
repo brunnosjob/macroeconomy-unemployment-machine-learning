@@ -301,6 +301,9 @@ if pag == 'Sobre os modelos':
     
     Se tratando de um modelo contando com apenas uma variável independente, o ponto 4 não é considerado. 
     A partir das três primeiras, avalio a adequação dos dados para construição dos modelos.''')
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
     
     st.markdown('#### Distribuição do resíduo')
     
@@ -343,6 +346,7 @@ if pag == 'Sobre os modelos':
     
     st.markdown(' ')
     st.markdown(' ')
+    st.markdown(' ')
     st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
     
     scatter_resid_fiscal = Image.open('scatter_resid_fiscal.png')
@@ -358,6 +362,10 @@ if pag == 'Sobre os modelos':
     scttr_pub_fiscal = Image.open('sctrr_pub_fiscal.png')
     st.image(scttr_pub_fiscal, use_column_width=True)
     
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
+    
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''
     O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
@@ -371,6 +379,10 @@ if pag == 'Sobre os modelos':
      Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
      Esse é um valor moderado.
      ''')
+    
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
 
     st.markdown('### Modelo para estimativa da taxa de desemprego a partir do percentual da estimada saúde fiscal')
     
@@ -439,6 +451,7 @@ if pag == 'Sobre os modelos':
     
     st.markdown(' ')
     st.markdown(' ')
+    st.markdown(' ')
     st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
     
     scatter_resid_unemp = Image.open('dist_resid_scatter_model_2.png')
@@ -453,6 +466,10 @@ if pag == 'Sobre os modelos':
     
     scttr_unemp_fiscal = Image.open('scatter_unemp_fiscal.png')
     st.image(scttr_unemp_fiscal, use_column_width=True)
+    
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''
