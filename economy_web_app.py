@@ -277,6 +277,8 @@ if pag == 'Sobre os modelos':
     st.markdown(' ')
     st.markdown(' ')  
     
+    st.markdown('#### Estatísticas do desempenho do modelo em relação aos dados de teste')
+    
     st.markdown('__Quantidade de variáveis independentes:__ 1')
     st.markdown('__R²:__ 59,67%')
     st.markdown('__Média residual:__ 0,033')
