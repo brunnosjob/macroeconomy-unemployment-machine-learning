@@ -304,8 +304,8 @@ if pag == 'Sobre os modelos':
     
     st.markdown('#### Distribuição do resíduo')
     
-    dist_resid_fiscal_unemp = Image.open('dist_resid_fiscal_unemp.png')
-    st.image(dist_resid_fiscal_unemp , use_column_width=True)  
+    dist_resid_model_1 = Image.open('dist_resid_model_1_unemp.png')
+    st.image(dist_resid_model_1 , use_column_width=True)  
     st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
     st.markdown('''
     Outro teste que pode confirmar a normalidade da distribuição dos resíduos e o teste de assimetria:
@@ -388,5 +388,74 @@ if pag == 'Sobre os modelos':
     st.markdown(' ')
     st.markdown(' ')
 
+    st.markdown('#### Distribuição do resíduo')
     
+    dist_resid_model_2 = Image.open('dist_resid_model_2.png')
+    st.image(dist_resid_fiscal_unemp , use_column_width=True)  
+    st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
+    st.markdown('''
+    Outro teste que confirma ou rejeita a normalidade é o teste de Jarque-Bera:
+    
+    __Jarque-Bera:__
+    
+    Para valores de p < 0,05 a normalidade é rejeitada.
+    
+    __Resultado de P de Jarque-Bera:__ 0,602
+    
+    Confirmada novamente a normalidade dos resíduos.
+    
+    Uma configuração que pode confirmar a normalidade da distribuição dos resíduos é a análise da assimetria:
+    
+    __Fórmula Skewness:__
+    
+    Quanto mais próxima a zero, mais perfeita é a simetria, o que configura a normalidade. Para valor y > 0, existe uma assimetria positiva, e negativa para valor y < 0.
+    
+    __Resultado para Skewness:__ 0,495.
+    
+    A normalidade da distribuição não é perfeita, apresentando uma assimetria positiva.
+    ''')
+    
+    st.markdown('''
+    Um último valor que evidencia mais informações é o valor da curtose.
+    
+    __Fórmula Curtose:__
+    
+    A curtose de uma distribuição normal é 3. Para valor y > 3 a distribuição é mais “alta” que a distribuição normal e para valor y < 3, mais “achatada”.
+    
+    __Resultado para Curtose:__ -0,871
+    
+    A curva normal do resíduo do modelo é mais achatada do que a curva da perfeita curva normal.
+    ''')
+    
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
+    
+    scatter_resid_fiscal = Image.open('scatter_resid_fiscal.png')
+    st.image(scatter_resid_fiscal , use_column_width=True)
+    
+    st.markdown(' ')
+    st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ')  
+    
+    st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
+    
+    scttr_pub_fiscal = Image.open('sctrr_pub_fiscal.png')
+    st.image(scttr_pub_fiscal, use_column_width=True)
+    
+    st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
+    st.markdown('''
+    O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
+                
+     1 - Os resíduos apresentam distribuição normal;
+                
+     2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
+                
+     3 - Os resíduos são independentes.
+                
+     Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
+     Esse é um valor moderado.
+     ''')
+
     
