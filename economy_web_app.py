@@ -351,15 +351,15 @@ if pag == 'Sobre os modelos':
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
                 
-                1 - Os resíduos apresentam distribuição normal;
+     1 - Os resíduos apresentam distribuição normal;
                 
-                2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
+     2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
                 
-                3 - Os resíduos são independentes.
+     3 - Os resíduos são independentes.
                 
-                Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
-                Esse é um valor moderado.
-                ''')
+     Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
+     Esse é um valor moderado.
+     ''')
 
     st.markdown('### Modelo para estimativa da taxa de desemprego a partir do percentual da estimada saúde fiscal')
     
@@ -368,7 +368,7 @@ if pag == 'Sobre os modelos':
     A linha de predição, em laranja, 
     demonstra o desempenho do  modelo de predição de saúde fiscal, em relação aos dados de teste, os quais são representados pela linha azul.
     As previsões são razoáveis em relação aos dados reais.''')
-    pred_fiscal_unempl = Image.open('pred_fiscal_unemp.png')
+    pred_fiscal_unemp = Image.open('pred_fiscal_unemp.png')
     st.image(pred_fiscal_unemp , use_column_width=True)
     
     st.markdown(' ')
