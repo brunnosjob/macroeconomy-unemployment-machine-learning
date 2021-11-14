@@ -54,6 +54,9 @@ if pag == 'Interagir com o modelo':
     st.header('Bem-vindo à 4Economy')
     st.subheader('Uma aplicação web de machine learning voltada para a macroeconomia')
     st.markdown(' ')
+    st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ') 
 
     #Explicações
     st.markdown('### Como você pode experimentar e usar essa aplicação:')
@@ -77,6 +80,9 @@ if pag == 'Interagir com o modelo':
 
     4 - Você pode repetir o processo inúmeras vezes, inclusive, usar para algum trabalho ou projeto.''')
     st.markdown(' ')
+    st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ') 
 
     #Buscando modelo de predição de saúde fiscal
     with open('simple_health_fiscal_tree.pkl', 'rb') as f:
@@ -126,6 +132,9 @@ if pag == 'Sobre o conjunto de dados':
     
     
     Os dados não apresentavam ausência de valores tampouco inconsistência de valores, como idades negativas e/ou alturas negativas, informações irreais.''')
+    st.markdown(' ')
+    st.markdown(' ') 
+    
     st.markdown('#### Correlações antes da retirada de outliers')
     st.markdown('Antes de a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
     corr_min = Image.open('corr_min.png')
@@ -150,8 +159,9 @@ if pag == 'Sobre o conjunto de dados':
     GDP Growth Rate (%): -0,63.
     ''')
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ')
+    st.markdown(' ') 
     st.markdown('#### Correlações após retirada de outliers')
     
     
@@ -174,7 +184,9 @@ if pag == 'Sobre o conjunto de dados':
     Fiscal Health: -0,68;
     ''')
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
+    st.markdown(' ') 
     st.markdown('''Como pode-se apreender, houve potencialização ente certas variáveis independentes e as variáveis dependentes, enquanto, 
     em relação a outras independentes, houve enfraquecimento correlacional.''')
     
@@ -371,8 +383,9 @@ if pag == 'Sobre os modelos e o produto final':
     st.image(scttr_pub_fiscal, use_column_width=True)
     
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ')
+    st.markdown(' ') 
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''
@@ -389,8 +402,9 @@ if pag == 'Sobre os modelos e o produto final':
      ''')
     
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ')
+    st.markdown(' ') 
 
     st.markdown('### Modelo para estimativa da taxa de desemprego a partir do percentual da estimada saúde fiscal')
     
@@ -415,8 +429,9 @@ if pag == 'Sobre os modelos e o produto final':
     st.markdown('__Desvio padrão residual:__ 2.014')
     st.markdown('__Erro quadrado médio:__ 6.387')
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ')
+    st.markdown(' ') 
 
     st.markdown('#### Distribuição do resíduo')
     
@@ -476,8 +491,9 @@ if pag == 'Sobre os modelos e o produto final':
     st.image(scttr_unemp_fiscal, use_column_width=True)
     
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ')
+    st.markdown(' ') 
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''
@@ -494,8 +510,9 @@ if pag == 'Sobre os modelos e o produto final':
      ''')
     
     st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ')
+    st.markdown(' ') 
 
     st.markdown('### Alerta sobre o desempenho do modelo')
     st.markdown('''
