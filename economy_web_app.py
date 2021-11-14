@@ -390,7 +390,7 @@ if pag == 'Sobre os modelos':
     st.markdown('#### Estatísticas do desempenho do modelo em relação aos dados de teste')
     
     st.markdown('__Quantidade de variáveis independentes:__ 1')
-    st.markdown('__R²:__ 45.23%%')
+    st.markdown('__R²:__ 45.23%')
     st.markdown('__Média residual:__ -1.526')
     st.markdown('__Desvio padrão residual:__ 2.014')
     st.markdown('__Erro quadrado médio:__ 6.387')
@@ -451,8 +451,8 @@ if pag == 'Sobre os modelos':
     
     st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
     
-    scttr_pub_fiscal = Image.open('sctrr_pub_fiscal.png')
-    st.image(scttr_pub_fiscal, use_column_width=True)
+    scttr_unemp_fiscal = Image.open('scttr_unemp_fiscal.png')
+    st.image(scttr_unemp_fiscal, use_column_width=True)
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''
@@ -460,12 +460,12 @@ if pag == 'Sobre os modelos':
                 
      1 - Os resíduos apresentam distribuição normal;
                 
-     2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
+     2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos;
                 
      3 - Os resíduos são independentes.
                 
-     Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
-     Esse é um valor moderado.
+     Há de se considerar que  o modelo linear explica cerca de 45.23% da variância da variável dependente a partir da variável independente.
+     Esse é um valor de fraco para moderado.
      ''')
 
     
