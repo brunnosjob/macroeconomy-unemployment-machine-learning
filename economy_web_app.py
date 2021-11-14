@@ -115,6 +115,15 @@ if pag == 'Interagir com o modelo':
 
     st.write('País:', pais)
     st.write('A taxa de desemprego está em torno de {}%'.format(unemployment))
+    st.write('''
+    Para saber a quantidade estimada de pessoas desempregadas:
+    
+    1 - Divida a taxa de desemprego por 100;
+    
+    2 - Multiplique o resultado com a quantidade de mão de obra humana no país.
+    A quantidade de mão de obra humana é o total de pessoas que estão procurando emprego mais o total de pessoas que estão trabalhando.
+    É possível encontrar a quantidade de mão de obra humana em um país pela internet.
+    ''')
 
 
     
