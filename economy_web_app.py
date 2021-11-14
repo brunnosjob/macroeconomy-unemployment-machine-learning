@@ -268,7 +268,19 @@ if pag == 'Sobre os modelos':
     st.markdown('__Média residual:__ 0,033')
     st.markdown('__Desvio padrão residual:__ 0,088')
     st.markdown('__Erro quadrado médio:__ 0,009')
-                
+    st.markdwon(' ')
+    st.markdwon(' ')
     
+    dist_resid_fiscal_unemp = Image.open('dist_resid_fiscal_unemp.png')
+    st.image(dist_resid_fiscal_unemp , use_column_width=True)  
+    st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal.')
+    st.markdown('''
+    Outro teste que pode confirmar a normalidade da distribuição dos resíduos e o teste de assimetria:
     
-    st.markdown(' ')
+    __Fórmula Skewness:__
+    
+    Quanto mais próxima a zero, mais perfeita é a simetria, o que configura a normalidade. Para valores y > 0, existe uma assimetria positiva, e negativa para valores y < 0.
+    __Resultado para Skewness:__ 0,808.
+    
+    A normalidade da distribuição não é perfeita, apresentando uma assimetria positiva.
+    ''')
