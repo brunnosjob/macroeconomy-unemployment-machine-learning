@@ -57,13 +57,15 @@ if pag == 'Interagir com o modelo':
 
     #Explicações
     st.markdown('### Como você pode experimentar e usar essa aplicação:')
-    st.markdown('''1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
+    st.markdown('''
+    
+    1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
     Esse valor está em porcentagem. Ele representa, em termos percentuais,
     o quanto do PIB de um país está comprometido com a dívida pública desse país;
 
-    1 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
+    2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
 
-    2 - Você pode realizar uma pesquisa e usar dados reais:
+    3 - Você pode realizar uma pesquisa e usar dados reais:
 
     I - Escolha um país;
 
@@ -73,7 +75,7 @@ if pag == 'Interagir com o modelo':
     III - Compare o resultado da predição acerca da taxa de desemprego com o valor real da taxa de desemprego
     desse país.
 
-    3 - Você pode repetir o processo inúmeras vezes, inclusive, usar para algum trabalho ou projeto.''')
+    4 - Você pode repetir o processo inúmeras vezes, inclusive, usar para algum trabalho ou projeto.''')
     st.markdown(' ')
 
     #Buscando modelo de predição de saúde fiscal
