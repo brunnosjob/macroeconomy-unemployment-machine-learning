@@ -145,6 +145,9 @@ if pag == 'Sobre o conjunto de dados':
     
     GDP Growth Rate (%): -0,63.
     ''')
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
     st.markdown('Após a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
     sem_out_corr = Image.open('sem_out_corr.png')
     st.image(sem_out_corr, use_column_width=True)
