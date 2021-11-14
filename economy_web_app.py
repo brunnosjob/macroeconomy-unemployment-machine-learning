@@ -115,6 +115,5 @@ if pag == 'Interagir com o modelo':
 #Página 2
 if pag == 'Sobre o modelo':
     st.title('Qualidade dos modelos')
-    st.markdown(' ')
     st.markdown('#### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
     
