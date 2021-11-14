@@ -123,8 +123,7 @@ if pag == 'Sobre o conjunto de dados':
     econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
     ''')
     #Gerando dataframe
-    df = pd.DataFrame('final_database_tcc.csv')
-    st.dataframe(df)
+    st.dataframe('final_database_tcc.csv')
     
     
 #Página 3
