@@ -361,6 +361,31 @@ if pag == 'Sobre os modelos':
                 Esse é um valor moderado.
                 ''')
 
+    st.markdown('### Modelo para estimativa da taxa de desemprego a partir do percentual da estimada saúde fiscal')
     
+    st.markdown('''
+    Inicio apresentando a comparação entre a linha de predição e a linha real. 
+    A linha de predição, em laranja, 
+    demonstra o desempenho do  modelo de predição de saúde fiscal, em relação aos dados de teste, os quais são representados pela linha azul.
+    As previsões são razoáveis em relação aos dados reais.''')
+    pred_fiscal_unempl = Image.open('pred_fiscal_unemp.png')
+    st.image(pred_fiscal_unemp , use_column_width=True)
+    
+    st.markdown(' ')
+    st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ')  
+    
+    st.markdown('#### Estatísticas do desempenho do modelo em relação aos dados de teste')
+    
+    st.markdown('__Quantidade de variáveis independentes:__ 1')
+    st.markdown('__R²:__ 45.23%%')
+    st.markdown('__Média residual:__ -1.526')
+    st.markdown('__Desvio padrão residual:__ 2.014')
+    st.markdown('__Erro quadrado médio:__ 6.387')
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
+
     
     
