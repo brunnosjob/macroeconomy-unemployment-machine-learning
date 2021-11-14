@@ -410,7 +410,7 @@ if pag == 'Sobre os modelos':
     
     Para valores de p < 0,05 a normalidade é rejeitada.
     
-    __Resultado de P de Jarque-Bera:__ 0.466
+    __Resultado de P de Jarque-Bera:__ 0.602
     
     Confirmada novamente a normalidade dos resíduos.
     
@@ -441,8 +441,8 @@ if pag == 'Sobre os modelos':
     st.markdown(' ')
     st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
     
-    scatter_resid_fiscal = Image.open('scatter_resid_fiscal.png')
-    st.image(scatter_resid_fiscal , use_column_width=True)
+    scatter_resid_unemp = Image.open('dist_resid_scatter_model_2.png')
+    st.image(scatter_resid_unemp , use_column_width=True)
     
     st.markdown(' ')
     st.markdown(' ')    
