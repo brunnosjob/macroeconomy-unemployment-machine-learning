@@ -123,7 +123,7 @@ if pag == 'Sobre o conjunto de dados':
     econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
     ''')
     st.markdown('#### Correlações antes da retirada de outliers')
-    st.markdwon('Antes de a retirada de outliers, as principais correlações com as variáveis saúde fiscal e desemprego eram:')
+    st.markdown('Antes de a retirada de outliers, as principais correlações com as variáveis saúde fiscal e desemprego eram:')
     corr_min = Image.open('corr_min.png')
     st.image(corr_min, use_column_width=True)
     
