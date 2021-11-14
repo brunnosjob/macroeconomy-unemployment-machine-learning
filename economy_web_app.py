@@ -136,6 +136,14 @@ if pag == 'Sobre o conjunto de dados':
     Trade Freedom: 0,6;
     
     Unemployment (%): -0,58.
+    
+    #### Para com a variável dependente Unemployment (%):
+    
+    Inflation (%): 0,57;
+    
+    Fiscal Health: -0,58;
+    
+    GDP Growth Rate (%): -0,63.
     ''')
     
 #Página 3
