@@ -348,7 +348,18 @@ if pag == 'Sobre os modelos':
     scttr_pub_fiscal = Image.open('sctrr_pub_fiscal.png')
     st.image(scttr_pub_fiscal, use_column_width=True)
     
-    
+    st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
+    st.markdown('''O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
+                
+                1 - Os resíduos apresentam distribuição normal;
+                
+                2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
+                
+                3 - Os resíduos são independentes.
+                
+                Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
+                Esse é um valor moderado.
+                ''')
 
     
     
