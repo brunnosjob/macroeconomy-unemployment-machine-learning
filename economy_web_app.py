@@ -182,13 +182,23 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown('#### Gráficos de caixa evidenciando outliers nas principais variáveis para o teste e desenvolvimento do modelo')
     total_outlier0 = Image.open('total_outlier0.png')
     st.image(total_outlier0, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
     
     total_outlier1 = Image.open('total_outlier1.png')
     st.image(total_outlier1, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
     
     total_outlier2 = Image.open('total_outlier2.png')
     st.image(total_outlier2, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
     
+    total_outlier3 = Image.open('total_outlier3.png')
+    st.image(total_outlier3, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
     
 #Página 3
 if pag == 'Sobre os modelos':
