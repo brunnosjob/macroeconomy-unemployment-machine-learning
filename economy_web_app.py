@@ -345,7 +345,7 @@ if pag == 'Sobre os modelos':
     
     st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
     
-    scttr_pub_fiscal = Image.open('scttr_pub_fiscal.png')
+    scttr_pub_fiscal = Image.open('sctrr_pub_fiscal.png')
     st.image(scttr_pub_fiscal, use_column_width=True)
     
     
