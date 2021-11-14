@@ -34,7 +34,7 @@ st.sidebar.markdown(' ')
 
 #Menu
 st.sidebar.title('Menu')
-pag = st.sidebar.selectbox('Selecione a página:', ['Interagir com o modelo', 'Sobre o modelo'])
+pag = st.sidebar.selectbox('Selecione a página:', ['Interagir com o modelo', 'Sobre o conjunto de dados', 'Sobre os modelos'])
 st.sidebar.markdown(' ')
 
 #Redes sociais
@@ -113,10 +113,26 @@ if pag == 'Interagir com o modelo':
     st.write('A taxa de desemprego está em torno de {}%.'.format(unemployment))
     st.write('Aproximação do total de desempregado do país:', desempregado)
 
+
+    
 #Página 2
-if pag == 'Sobre o modelo':
+if pag == 'Sobre o conjunto de dados':
+    st.title('Qualidade dos dados')
+    st.markdown('''
+    Inicialmente, o modelo continha 56 linhas, referentes a 56 países, e 44 colunas. As colunas apresentavam informações
+    econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
+    ''')
+    #Gerando dataframe
+    df = pd.DataFrame('final_database_tcc.csv')
+    st.dataframe(df)
+    
+    
+#Página 3
+if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
-    st.markdown('#### Gráfico de correlação entre as variáveis antes da eliminação de outliers')
+    st.markdown('#### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
+    st.markdown(' ')
+    st.markdown('''Ap
     total_corr = Image.open('total_corr.png')
     st.image(total_corr, use_column_width=True)
     st.markdown('''Observando o gráfico acima, pode-se extrair as correlações entre todas as variáveis numéricas da base de dados, além das duas variáveis
@@ -124,5 +140,5 @@ if pag == 'Sobre o modelo':
     st.markdown(' ')
                 
     
-    st.markdown('#### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
+    
     st.markdown(' ')
