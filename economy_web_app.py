@@ -200,6 +200,21 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ')
     st.markdown(' ')
     
+    total_outlier4 = Image.open('total_outlier4.png')
+    st.image(total_outlier4, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    total_outlier5 = Image.open('total_outlier5.png')
+    st.image(total_outlier5, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    total_outlier6 = Image.open('total_outlier6.png')
+    st.image(total_outlier6, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
 #Página 3
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
