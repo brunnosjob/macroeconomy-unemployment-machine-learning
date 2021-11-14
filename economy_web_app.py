@@ -307,12 +307,19 @@ if pag == 'Sobre os modelos':
     
     st.markdown(' ')
     st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ')  
     
-    st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Health Fiscal.')
+    st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
     pred_debt_fiscal = Image.open('pred_debt_fiscal.png')
     st.image(pred_debt_fiscal , use_column_width=True)
     st.markdown('''A linha de predição, em laranja, 
     demonstra o desempenho do  modelo de predição da saúde fiscal, em relação aos dados de teste, os quais são representados pela linha azul.''')
+    
+    st.markdown(' ')
+    st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ')  
     
     
     
