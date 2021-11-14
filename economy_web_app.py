@@ -176,6 +176,14 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown('''Como pode-se apreender, houve potencialização ente certas variáveis independentes e as variáveis dependentes, enquanto, 
     em relação a outras independentes, houve enfraquecimento correlacional.''')
     
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    st.markdown('#### Gráficos de caixa evidenciando outliers nas principais variáveis para o teste e desenvolvimento do modelo')
+    total_outlier0 = Image.open('total_outlier0.png')
+    st.image(total_outlier0, use_column_width=True)
+    
+    
 #Página 3
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
