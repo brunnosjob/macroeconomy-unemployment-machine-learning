@@ -279,9 +279,21 @@ if pag == 'Sobre os modelos':
     
     __Fórmula Skewness:__
     
-    Quanto mais próxima a zero, mais perfeita é a simetria, o que configura a normalidade. Para valores y > 0, existe uma assimetria positiva, e negativa para valores y < 0.
+    Quanto mais próxima a zero, mais perfeita é a simetria, o que configura a normalidade. Para valor y > 0, existe uma assimetria positiva, e negativa para valor y < 0.
     
     __Resultado para Skewness:__ 0,808.
     
     A normalidade da distribuição não é perfeita, apresentando uma assimetria positiva.
+    ''')
+    
+    st.markdown('''
+    Um último valor que evidencia mais informações é o valor da curtose.
+    
+    __Fórmula Curtose:__
+    
+    A curtose de uma distribuição normal é 3. Para valor y > 3 a distribuição é mais “alta” que a distribuição normal e para valor y < 3, mais “achatada”.
+    
+    _Resultado para Curtose:__ 0,063
+    
+    A curva normal do resíduo do modelo é mais achatada do que a curva da perfeita curva normal.
     ''')
