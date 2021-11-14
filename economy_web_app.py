@@ -169,7 +169,7 @@ if pag == 'Sobre o conjunto de dados':
     Fiscal Health: -0,68;
     ''')
     st.markdown(' ')
-    st.mardown(' ')
+    st.markdown(' ')
     st.markdown('''Como pode-se apreender, houve potencialização ente certas variáveis independentes e as variáveis dependentes, enquanto, 
     em relação a outras independentes, houve enfraquecimento correlacional.''')
     
