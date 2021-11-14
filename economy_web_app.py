@@ -113,7 +113,7 @@ if pag == 'Interagir com o modelo':
 
     st.write('País:', pais)
     st.write('A taxa de desemprego está em torno de {}%.'.format(unemployment))
-    st.write('Aproximação do total de desempregado do país:', desempregado)
+    st.write('Aproximação do total de desempregado do país: {}'.format(desempregado))
 
 
     
