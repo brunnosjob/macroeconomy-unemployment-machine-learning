@@ -121,7 +121,9 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown('''
     Inicialmente, o modelo continha 56 linhas, referentes a 56 países, e 44 colunas. As colunas apresentavam informações
     econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
-    ''')
+    
+    
+    Os dados não apresentavam ausência de valores tampouco inconsistência de valores, como idades negativas e/ou alturas negativas, informações irreais.''')
     st.markdown('#### Correlações antes da retirada de outliers')
     st.markdown('Antes de a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
     corr_min = Image.open('corr_min.png')
@@ -148,6 +150,7 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ')
     st.markdown(' ')
     st.markdown(' ')
+    st.markdown('#### Correlações após retirada de outliers')
     
     
     st.markdown('Após a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
