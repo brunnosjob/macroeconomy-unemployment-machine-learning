@@ -293,7 +293,7 @@ if pag == 'Sobre os modelos':
     
     A curtose de uma distribuição normal é 3. Para valor y > 3 a distribuição é mais “alta” que a distribuição normal e para valor y < 3, mais “achatada”.
     
-    _Resultado para Curtose:__ 0,063
+    __Resultado para Curtose:__ 0,063
     
     A curva normal do resíduo do modelo é mais achatada do que a curva da perfeita curva normal.
     ''')
