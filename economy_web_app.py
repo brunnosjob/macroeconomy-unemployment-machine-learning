@@ -122,8 +122,10 @@ if pag == 'Sobre o conjunto de dados':
     Inicialmente, o modelo continha 56 linhas, referentes a 56 países, e 44 colunas. As colunas apresentavam informações
     econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
     ''')
-    #Gerando dataframe
-    st.dataframe('final_database_tcc.csv')
+    st.markdown('#### Correlações antes da retirada de outliers')
+    st.markdwon('Antes de a retirada de outliers, as principais correlações com as variáveis saúde fiscal e desemprego eram:')
+    corr_min = Image.open('corr_min.png')
+    st.image(corr_min, use_column_width=True)
     
     
 #Página 3
