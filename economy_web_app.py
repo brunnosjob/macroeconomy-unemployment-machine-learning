@@ -123,10 +123,20 @@ if pag == 'Sobre o conjunto de dados':
     econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
     ''')
     st.markdown('#### Correlações antes da retirada de outliers')
-    st.markdown('Antes de a retirada de outliers, as principais correlações com as variáveis saúde fiscal e desemprego eram:')
+    st.markdown('Antes de a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
     corr_min = Image.open('corr_min.png')
     st.image(corr_min, use_column_width=True)
+    st.markdown('''
+    As principais correlações eram:
     
+    *Para com a variável dependente Fiscal Health:*
+    
+    Public Debt (% of GDP): -0,51;
+    
+    Trade Freedom: 0,6;
+    
+    Unemployment (%): -0,58.
+    ''')
     
 #Página 3
 if pag == 'Sobre os modelos':
