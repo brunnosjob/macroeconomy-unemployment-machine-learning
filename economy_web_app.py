@@ -263,12 +263,8 @@ if pag == 'Sobre o conjunto de dados':
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
     st.markdown('###### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
-    st.markdown(' ')
-    total_corr = Image.open('total_corr.png')
-    st.image(total_corr, use_column_width=True)
-    st.markdown('''Observando o gráfico acima, pode-se extrair as correlações entre todas as variáveis numéricas da base de dados, além das duas variáveis
-    dependentes dos respectivos modelos.''')
-    st.markdown(' ')
+    st.markdown('__R²:__ ')
+
                 
     
     
