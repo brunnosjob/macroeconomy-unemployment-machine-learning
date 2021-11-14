@@ -268,8 +268,8 @@ if pag == 'Sobre os modelos':
     st.markdown('__Média residual:__ 0,033')
     st.markdown('__Desvio padrão residual:__ 0,088')
     st.markdown('__Erro quadrado médio:__ 0,009')
-    st.markdwon(' ')
-    st.markdwon(' ')
+    st.markdown(' ')
+    st.markdown(' ')
     
     dist_resid_fiscal_unemp = Image.open('dist_resid_fiscal_unemp.png')
     st.image(dist_resid_fiscal_unemp , use_column_width=True)  
