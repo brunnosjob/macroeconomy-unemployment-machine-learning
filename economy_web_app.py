@@ -129,7 +129,7 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown('''
     As principais correlações eram:
     
-    *Para com a variável dependente Fiscal Health:*
+    #### Para com a variável dependente Fiscal Health:
     
     Public Debt (% of GDP): -0,51;
     
