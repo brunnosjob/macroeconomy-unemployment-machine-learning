@@ -252,7 +252,11 @@ if pag == 'Sobre o conjunto de dados':
     st.image(sem_outlier6, use_column_width=True)
     st.markdown(' ')
     st.markdown(' ')
-
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown('Alguns valores destacados nos gráficos não foram considerados outliers para não distanciar excessivamente os modelos da realidade.')
+    
+    
 #Página 3
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
