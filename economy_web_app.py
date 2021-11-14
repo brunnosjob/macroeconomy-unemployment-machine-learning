@@ -280,6 +280,7 @@ if pag == 'Sobre os modelos':
     __Fórmula Skewness:__
     
     Quanto mais próxima a zero, mais perfeita é a simetria, o que configura a normalidade. Para valores y > 0, existe uma assimetria positiva, e negativa para valores y < 0.
+    
     __Resultado para Skewness:__ 0,808.
     
     A normalidade da distribuição não é perfeita, apresentando uma assimetria positiva.
