@@ -349,7 +349,8 @@ if pag == 'Sobre os modelos':
     st.image(scttr_pub_fiscal, use_column_width=True)
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
-    st.markdown('''O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
+    st.markdown('''
+    O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
                 
      1 - Os resíduos apresentam distribuição normal;
                 
