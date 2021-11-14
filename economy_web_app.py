@@ -254,7 +254,7 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ')
     st.markdown(' ')
     st.markdown(' ')
-    st.markdown('Alguns valores destacados nos gráficos não foram considerados outliers para não distanciar excessivamente os modelos da realidade.')
+    st.markdown('Alguns valores destacados nos gráficos não foram considerados outliers a fim de não distanciar excessivamente os modelos da realidade.')
     
     
 #Página 3
