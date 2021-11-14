@@ -214,7 +214,43 @@ if pag == 'Sobre o conjunto de dados':
     st.image(total_outlier6, use_column_width=True)
     st.markdown(' ')
     st.markdown(' ')
+
+    st.markdown('#### Gráficos de caixa evidenciando nova configuração da posição dos dados após retirada de determinados outliers')
+    sem_outlier0 = Image.open('sem_outlier0.png')
+    st.image(sem_outlier0, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
     
+    sem_outlier1 = Image.open('sem_outlier1.png')
+    st.image(sem_outlier1, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    sem_outlier2 = Image.open('sem_outlier2.png')
+    st.image(sem_outlier2, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    sem_outlier3 = Image.open('sem_outlier3.png')
+    st.image(sem_outlier3, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    sem_outlier4 = Image.open('sem_outlier4.png')
+    st.image(sem_outlier4, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    sem_outlier5 = Image.open('sem_outlier5.png')
+    st.image(sem_outlier5, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+    
+    sem_outlier6 = Image.open('sem_outlier6.png')
+    st.image(sem_outlier6, use_column_width=True)
+    st.markdown(' ')
+    st.markdown(' ')
+
 #Página 3
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
