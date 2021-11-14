@@ -263,6 +263,20 @@ if pag == 'Sobre o conjunto de dados':
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
     st.markdown('### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
+    
+    st.markdown('''
+    Inicio apresentando a comparação entre a linha de predição e a linha real. 
+    A linha de predição, em laranja, 
+    demonstra o desempenho do  modelo de predição de saúde fiscal, em relação aos dados de teste, os quais são representados pela linha azul.
+    As previsões são razoáveis em relação aos dados reais.''')
+    pred_debt_fiscal = Image.open('pred_debt_fiscal.png')
+    st.image(pred_debt_fiscal , use_column_width=True)
+    
+    st.markdown(' ')
+    st.markdown(' ')    
+    st.markdown(' ')
+    st.markdown(' ')  
+    
     st.markdown('__Quantidade de variáveis independentes:__ 1')
     st.markdown('__R²:__ 59,67%')
     st.markdown('__Média residual:__ 0,033')
@@ -270,10 +284,27 @@ if pag == 'Sobre os modelos':
     st.markdown('__Erro quadrado médio:__ 0,009')
     st.markdown(' ')
     st.markdown(' ')
+    st.markdown(' ')
+    
+    st.markdown('#### Premissas para um modelo ser considerado adequado:')
+    st.markdown('''
+    1 - Distribuição normal dos resíduos;
+    
+    2 - Expecta-se que o resíduo seja igual a 0;
+    
+    3 - Os resíduos devem ser independentes entre si.
+    
+    4 - Homecedasticidade - em caso de modelos regressores múltiplos.
+    
+    
+    Se tratando de um modelo contando com apenas uma variável independente, o ponto 4 não é considerado. 
+    A partir das três primeiras, avalio a adequação dos dados para construição dos modelos.''')
+    
+    st.markdown('#### Distribuição do resíduo')
     
     dist_resid_fiscal_unemp = Image.open('dist_resid_fiscal_unemp.png')
     st.image(dist_resid_fiscal_unemp , use_column_width=True)  
-    st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal.')
+    st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
     st.markdown('''
     Outro teste que pode confirmar a normalidade da distribuição dos resíduos e o teste de assimetria:
     
@@ -311,15 +342,12 @@ if pag == 'Sobre os modelos':
     st.markdown(' ')  
     
     st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
-    pred_debt_fiscal = Image.open('pred_debt_fiscal.png')
-    st.image(pred_debt_fiscal , use_column_width=True)
-    st.markdown('''A linha de predição, em laranja, 
-    demonstra o desempenho do  modelo de predição da saúde fiscal, em relação aos dados de teste, os quais são representados pela linha azul.''')
     
-    st.markdown(' ')
-    st.markdown(' ')    
-    st.markdown(' ')
-    st.markdown(' ')  
+    scttr_pub_fiscal = Image.open('scttr_pub_fiscal.png')
+    st.image(scttr_pub_fiscal, use_column_width=True)
+    
+    
+
     
     
     
