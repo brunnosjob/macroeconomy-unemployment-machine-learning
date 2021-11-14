@@ -263,7 +263,8 @@ if pag == 'Sobre o conjunto de dados':
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
     st.markdown('###### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
-    st.markdown('__R²:__ ')
+    st.markdown('Modelo com uma variável independente')
+    st.markdown('__R²:__ 59,67%')
 
                 
     
