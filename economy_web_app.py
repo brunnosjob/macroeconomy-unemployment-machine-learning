@@ -60,7 +60,7 @@ if pag == 'Interagir com o modelo':
     st.markdown('''
     
     1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
-    Esse valor está em porcentagem. Ele representa, em termos percentuais,
+    Ele representa, em termos percentuais,
     o quanto do PIB de um país está comprometido com a dívida pública desse país;
 
     2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
@@ -262,6 +262,14 @@ if pag == 'Sobre o conjunto de dados':
 #Página 3
 if pag == 'Sobre os modelos':
     st.title('Qualidade dos modelos')
+    st.markdown('### Como os modelos funcionam e o objetivo')
+    st.markdown('''
+    são dois modelos regressores conectados. O objetivo dessa conexão é prever/estimar a taxa de desemprego de um dado país (real ou fictício).
+    O primeiro modelo estima a saúde fiscal do país a partir do percentual do PIB do país, comprometido com a dívida pública.
+    O segundo modelo recebe o valor da saúde fiscal, estimado pelo primeiro modelo, e estima a taxa de desemprego, que é o objetivo final.
+    ''')
+
+    
     st.markdown('### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
     
     st.markdown('''
@@ -484,5 +492,21 @@ if pag == 'Sobre os modelos':
      Há de se considerar que  o modelo linear explica cerca de 45.23% da variância da variável dependente a partir da variável independente.
      Esse é um valor de fraco para moderado.
      ''')
-
     
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
+
+    st.markdown('### Alerta sobre o desempenho do modelo')
+    st.markdown('''
+    __O modelo final__, que é a conexão entre os dois modelos,
+    __é simplório para abarcar a complexidade econômica__, 
+    porém, apresentou consideráveis aproximações aos dados reais em diferentes testes. 
+    No entanto, __o modelo não tem bom ou razoável desempenho com dados de países em enfáticas crises
+    ou países em contextos que exógenas significativas tornam esses mesmos países em países com dados/informações 
+    fora do padrão aprendido pelo modelo__. Esses tipos de dados são outliers dentro da base de dados usadas para desenvolver o modelo.
+    
+    __O produto final é uma demonstração__ de um produto de machine learning voltado para as Ciências Econômicas. 
+    Portanto, __esse é um produto de portfólio, e não cumpre com o rigor que um modelo econométrico deve de fato ter_, 
+    ainda que tenha sido razoável e tenha sido bom em diferentes testes e cenários preditivos, com exceção, como já dito, daquilo considerado outlier dentro da base de dados.
+    ''')
