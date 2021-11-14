@@ -451,7 +451,7 @@ if pag == 'Sobre os modelos':
     
     st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
     
-    scttr_unemp_fiscal = Image.open('scttr_unemp_fiscal.png')
+    scttr_unemp_fiscal = Image.open('scatter_unemp_fiscal.png')
     st.image(scttr_unemp_fiscal, use_column_width=True)
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
