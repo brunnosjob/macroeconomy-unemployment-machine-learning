@@ -297,3 +297,10 @@ if pag == 'Sobre os modelos':
     
     A curva normal do resíduo do modelo é mais achatada do que a curva da perfeita curva normal.
     ''')
+    
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
+    
+    scatter_resid_fiscal = Image.open('scatter_resid_fiscal.png')
+    st.image(scatter_resid_fiscal , use_column_width=True)  
