@@ -400,7 +400,7 @@ if pag == 'Sobre os modelos':
 
     st.markdown('#### Distribuição do resíduo')
     
-    dist_resid_model_2 = Image.open('dist_resid_model_2.png')
+    dist_resid_model_2 = Image.open('dist_resid_fiscal_unemp.png')
     st.image(dist_resid_model_2 , use_column_width=True)  
     st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
     st.markdown('''
