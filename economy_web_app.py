@@ -308,6 +308,16 @@ if pag == 'Sobre os modelos':
     st.image(dist_resid_model_1 , use_column_width=True)  
     st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
     st.markdown('''
+    Outro teste que confirma ou rejeita a normalidade é o teste de Jarque-Bera:
+    
+    __Jarque-Bera:__
+    
+    Para valores de p < 0,05 a normalidade é rejeitada.
+    
+    __Resultado de P de Jarque-Bera:__ 0.466
+        
+    Confirmada novamente a normalidade dos resíduos.
+    
     Outro teste que pode confirmar a normalidade da distribuição dos resíduos e o teste de assimetria:
     
     __Fórmula Skewness:__
@@ -391,7 +401,7 @@ if pag == 'Sobre os modelos':
     st.markdown('#### Distribuição do resíduo')
     
     dist_resid_model_2 = Image.open('dist_resid_model_2.png')
-    st.image(dist_resid_fiscal_unemp , use_column_width=True)  
+    st.image(dist_resid_model_2 , use_column_width=True)  
     st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
     st.markdown('''
     Outro teste que confirma ou rejeita a normalidade é o teste de Jarque-Bera:
@@ -400,7 +410,7 @@ if pag == 'Sobre os modelos':
     
     Para valores de p < 0,05 a normalidade é rejeitada.
     
-    __Resultado de P de Jarque-Bera:__ 0,602
+    __Resultado de P de Jarque-Bera:__ 0.466
     
     Confirmada novamente a normalidade dos resíduos.
     
