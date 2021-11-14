@@ -183,6 +183,12 @@ if pag == 'Sobre o conjunto de dados':
     total_outlier0 = Image.open('total_outlier0.png')
     st.image(total_outlier0, use_column_width=True)
     
+    total_outlier1 = Image.open('total_outlier1.png')
+    st.image(total_outlier1, use_column_width=True)
+    
+    total_outlier2 = Image.open('total_outlier2.png')
+    st.image(total_outlier2, use_column_width=True)
+    
     
 #Página 3
 if pag == 'Sobre os modelos':
