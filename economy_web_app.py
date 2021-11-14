@@ -214,6 +214,8 @@ if pag == 'Sobre o conjunto de dados':
     st.image(total_outlier6, use_column_width=True)
     st.markdown(' ')
     st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
 
     st.markdown('#### Gráficos de caixa evidenciando nova configuração da posição dos dados após retirada de determinados outliers')
     sem_outlier0 = Image.open('sem_outlier0.png')
