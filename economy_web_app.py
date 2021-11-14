@@ -116,7 +116,7 @@ if pag == 'Interagir com o modelo':
 if pag == 'Sobre o modelo':
     st.title('Qualidade dos modelos')
     st.markdown('#### Gráfico de correlação entre as variáveis antes da eliminação de outliers')
-    total_corr = Image.open(total_corr.png)
+    total_corr = Image.open('total_corr.png')
     st.image(total_corr, use_column_width=True)
     st.markdown('''Observando o gráfico acima, pode-se extrair as correlações entre todas as variáveis numéricas da base de dados, além das duas variáveis
     dependentes dos respectivos modelos.''')
