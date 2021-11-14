@@ -148,9 +148,30 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ')
     st.markdown(' ')
     st.markdown(' ')
+    
+    
     st.markdown('Após a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
     sem_out_corr = Image.open('sem_out_corr.png')
     st.image(sem_out_corr, use_column_width=True)
+    st.markdown('''
+    As principais correlações eram:
+    
+    #### Para com a variável dependente Fiscal Health:
+    
+    Public Debt (% of GDP): -0,58;
+    
+    Unemployment (%): -0,68.
+    
+    #### Para com a variável dependente Unemployment (%):
+    
+    Public Debt (% of GDP): 0,51
+    
+    Fiscal Health: -0,68;
+    ''')
+    st.markdown(' ')
+    st.mardown(' ')
+    st.markdown('''Como pode-se apreender, houve potencialização ente certas variáveis independentes e as variáveis dependentes, enquanto, 
+    em relação a outras independentes, houve enfraquecimento correlacional.''')
     
 #Página 3
 if pag == 'Sobre os modelos':
