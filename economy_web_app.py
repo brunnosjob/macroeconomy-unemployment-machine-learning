@@ -294,7 +294,7 @@ if pag == 'Sobre os modelos e o produto final':
     st.title('Qualidade dos modelos')
     st.markdown('### Como os modelos funcionam e o objetivo')
     st.markdown('''
-    são dois modelos regressores conectados. O objetivo dessa conexão é prever/estimar a taxa de desemprego de um dado país (real ou fictício).
+    São dois modelos regressores conectados. O objetivo dessa conexão é prever/estimar a taxa de desemprego de um dado país (real ou fictício).
     O primeiro modelo estima a saúde fiscal do país a partir do percentual do PIB do país, comprometido com a dívida pública.
     O segundo modelo recebe o valor da saúde fiscal, estimado pelo primeiro modelo, e estima a taxa de desemprego, que é o objetivo final.
     ''')
