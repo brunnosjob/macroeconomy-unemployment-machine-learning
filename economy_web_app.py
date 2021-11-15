@@ -306,7 +306,7 @@ if pag == 'Sobre os modelos e o produto final':
     Primeiramente, destaco que um modelo como esse, bem desenvolvido, pode auxiliar na tomada de decisão do Governo acerca 
     do endividamento público, tendo em vista o possível impacto que o endividamento pode advir negativamente sobre a taxa de desemprego.
     Além de questões de administração pública, um modelo como esse pode auxiliar em trabalhos acadêmicos, como a dissertação de um artigo científico,
-    o qual é útil para muitos fins políticos e jornalísticos.
+    o qual é útil para fins políticos e jornalísticos.
     ''')
     st.markdown('### Como os modelos funcionam e o objetivo')
     st.markdown('''
