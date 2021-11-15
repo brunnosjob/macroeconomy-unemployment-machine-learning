@@ -72,14 +72,17 @@ if pag == 'Interagir com o modelo':
     3 - Você pode realizar uma pesquisa e usar dados reais:
 
     I - Escolha um país;
+    
+    II - Pesquise sobre a quantidade de pessoas desse país disponível ao mercado de trabalho, estando empregada ou não;
 
-    II - Pesquise sobre o quanto do PIB desse país está comprometido com sua dívida pública.
+    III - Pesquise sobre o quanto do PIB desse país está comprometido com sua dívida pública.
     O valor deve estar em porcentagem, quando for colocado no espaço de preenchimento, presente logo abaixo.
 
     III - Compare o resultado da predição acerca da taxa de desemprego com o valor real da taxa de desemprego
-    desse país.
+    desse país, assim como a quantidade estimada de desempregado, que o modelo apresenta, com a quantidade real de desempregado presente nesse país.
 
-    4 - Você pode repetir o processo inúmeras vezes, inclusive, usar para algum trabalho ou projeto.''')
+    4 - Você pode repetir o processo inúmeras vezes, inclusive, usar essa aplicação web para algum trabalho, desde que a mesma caiba em seu trabalha,
+    tendo em vista o que está ressaltado nas páginas __sobre o conjunto de dados__ e __sobre os modelos e o produto final__.''')
     st.markdown(' ')
     st.markdown(' ')    
     st.markdown(' ') 
