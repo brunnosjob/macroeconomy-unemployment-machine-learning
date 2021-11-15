@@ -145,7 +145,7 @@ if pag == 'Sobre o conjunto de dados':
     
     Os dados não apresentavam ausência de valores tampouco inconsistência de valores, como idades negativas e/ou alturas negativas, informações irreais.
     
-    Após a limpeza de dados e análise de correlação, a base de dados para o desenvolvimento de modelos continha 44 linhas e 8 colunas.
+    Após a limpeza de dados e a análise de correlação, a base de dados para o desenvolvimento de modelos continha 44 linhas e 8 colunas.
     Diferentes modelos foram desenvolvidos até à seleção de dois.
     ''')
     st.markdown(' ')
