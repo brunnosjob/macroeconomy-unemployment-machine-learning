@@ -135,7 +135,7 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown('''
     Os dados são do primeiro semestre de 2021.
     Inicialmente, a base de dados continha 56 linhas, referentes a 56 países, e 44 colunas. As colunas apresentavam informações
-    econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
+    econômicas, de desempenho jurídico, de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
     Tais informações foram colhidas respectivamente da base de dados da organização Heritage e da EF English.
     
     
