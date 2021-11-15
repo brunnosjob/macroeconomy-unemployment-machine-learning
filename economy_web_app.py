@@ -64,8 +64,8 @@ if pag == 'Interagir com o modelo':
     1 - Você deve preencher os espaços, sendo dois deles opcionais.
     No espaço em que pede para insirir o percentual (%) do PIB comprometido com a dívida pública, você deve preencher com um valor percentual de 0 a 100.
     Não se deve colocar o símbolo de porcentagem (%).
-    O valor colocado por si só representa a percentual, isso é,
-    o quanto do PIB de um país está comprometido com a dívida pública desse mesmo país;
+    O valor colocado por si só representa o percentual, isso é,
+    o quanto do PIB de um dado país está comprometido com a dívida pública desse mesmo país;
 
     2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
 
