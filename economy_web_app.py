@@ -90,6 +90,8 @@ if pag == 'Interagir com o modelo':
     #Buscando modelo de previsão de taxa de desemprego
     with open('unemployment_simple_lm.pkl', 'rb') as f:
         regressor_sim_log = pickle.load(f)
+        
+    st.markdown('#### Test drive do modelo')
 
     #Aplicação dos modelos
     #Predição de saúde fiscal
