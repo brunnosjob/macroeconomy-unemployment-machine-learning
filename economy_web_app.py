@@ -61,9 +61,11 @@ if pag == 'Interagir com o modelo':
     st.markdown('#### Como você pode experimentar e usar essa aplicação:')
     st.markdown('''
     
-    1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
-    Ele representa, em termos percentuais,
-    o quanto do PIB de um país está comprometido com a dívida pública desse país;
+    1 - Você deve preencher os espaços, sendo dois deles opcionais.
+    No espaço em que pede para insirir o percentual (%) do PIB comprometido com a dívida pública, você deve preencher com um valor percentual de 0 a 100.
+    Não se deve colocar o símbolo de porcentagem (%).
+    O valor colocado por si só representa a percentual, isso é,
+    o quanto do PIB de um país está comprometido com a dívida pública desse mesmo país;
 
     2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
 
@@ -95,12 +97,12 @@ if pag == 'Interagir com o modelo':
     #Aplicação dos modelos
     #Predição de saúde fiscal
     #Nome do país
-    pais = st.text_input('Insira o nome do pais:')
+    pais = st.text_input('Insira o nome do pais (Opcional):')
     
     #População trabalhadora
     worker_pop = st.number_input('''
     Insira a população total desse país apta para trabalhar.
-    Esse valor é encontrado na Internet. É a soma do total empregado mais o total desemprego. que busca emprego. (Opcional):
+    Esse valor é encontrado na Internet. É a soma do total empregado mais o total desempregado que busca emprego (Opcional):
     ''', 0, 8000000000, 0)
 
     #Valor percentual da dívida pública
