@@ -58,7 +58,7 @@ if pag == 'Interagir com o modelo':
     st.markdown(' ')
 
     #Explicações
-    st.markdown('### Como você pode experimentar e usar essa aplicação:')
+    st.markdown('#### Como você pode experimentar e usar essa aplicação:')
     st.markdown('''
     
     1 - Você deve preencher o espaço com um valor percentual de 0 a 100.
@@ -80,7 +80,6 @@ if pag == 'Interagir com o modelo':
     4 - Você pode repetir o processo inúmeras vezes, inclusive, usar para algum trabalho ou projeto.''')
     st.markdown(' ')
     st.markdown(' ')    
-    st.markdown(' ')
     st.markdown(' ') 
 
     #Buscando modelo de predição de saúde fiscal
