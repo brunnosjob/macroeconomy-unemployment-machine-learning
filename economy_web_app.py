@@ -56,7 +56,6 @@ if pag == 'Interagir com o modelo':
     st.markdown(' ')
     st.markdown(' ')    
     st.markdown(' ')
-    st.markdown(' ') 
 
     #Explicações
     st.markdown('### Como você pode experimentar e usar essa aplicação:')
@@ -96,6 +95,12 @@ if pag == 'Interagir com o modelo':
     #Predição de saúde fiscal
     #Nome do país
     pais = st.text_input('Insira o nome do pais:')
+    
+    #População trabalhadora
+    worker_pop = st.number_input('''
+    Insira a população total desse país apta para trabalhar.
+    Esse valor é encontrado na Internet. É a soma do total empregado mais o total desemprego. que busca emprego. (Opcional):
+    ''', 0, 8000000000, 0)
 
     #Valor percentual da dívida pública
     public_debt = st.number_input('Insira o percentual (%) do PIB comprometido com a dívida pública:', 0.0, 100.0, 0.0)
@@ -112,18 +117,14 @@ if pag == 'Interagir com o modelo':
     unemployment = regressor_sim_log.predict(X_log)
     unemployment = np.round(unemployment, 3)
     taxa = unemployment/100
+    unemployed_pop = worker_pop * taxa
 
     st.write('País:', pais)
     st.write('A taxa de desemprego está em torno de {}%'.format(unemployment))
-    st.write('''
-    __Para saber a quantidade estimada de pessoas desempregadas:__
-    
-    1 - Divida a taxa de desemprego por 100;
-    
-    2 - Multiplique o resultado com a quantidade de mão de obra humana no país.
-    A quantidade de mão de obra humana é o total de pessoas que estão procurando emprego mais o total de pessoas que estão trabalhando.
-    Pela internet, é possível encontrar a quantidade de mão de obra humana em certos países.
-    ''')
+    if unemployed_pop > 0:
+        st.write('O total de desempregado está em torno de {}.'.format(unemployed_pop))
+    elif unemployed_pop == 0:
+        st.write(' ')
 
 
     
