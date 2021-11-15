@@ -545,6 +545,6 @@ if pag == 'Sobre os modelos e o produto final':
     fora do padrão aprendido pelo modelo__. Esses tipos de dados são outliers dentro da base de dados usadas para desenvolver o modelo.
     
     __O produto final é uma demonstração__ de um produto de machine learning voltado para as Ciências Econômicas. 
-    Portanto, __esse é um produto de portfólio, e não cumpre com o rigor que um modelo econométrico deve de fato ter_, 
+    Portanto, __esse é um produto de portfólio, e não cumpre com o rigor que um modelo econométrico deve de fato ter__, 
     ainda que tenha sido razoável e tenha sido bom em diferentes testes e cenários preditivos, com exceção, como já dito, daquilo considerado outlier dentro da base de dados.
     ''')
