@@ -133,8 +133,10 @@ if pag == 'Interagir com o modelo':
 if pag == 'Sobre o conjunto de dados':
     st.title('Qualidade dos dados')
     st.markdown('''
-    Inicialmente, o modelo continha 56 linhas, referentes a 56 países, e 44 colunas. As colunas apresentavam informações
+    Os dados são do primeiro semestre de 2021.
+    Inicialmente, a base de dados continha 56 linhas, referentes a 56 países, e 44 colunas. As colunas apresentavam informações
     econômicas, de desempenho jurídico e de desempenho burocrático e de relação com a língua inglesa. Há países de todos os continentes e de diferentes desenvolvimento.
+    Tais informações foram colhidas respectivamente da base de dados da organização Heritage e da EF English.
     
     
     Os dados não apresentavam ausência de valores tampouco inconsistência de valores, como idades negativas e/ou alturas negativas, informações irreais.''')
@@ -275,7 +277,17 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ')
     st.markdown(' ')
     st.markdown('Alguns valores destacados nos gráficos não foram considerados outliers a fim de não distanciar excessivamente os modelos da realidade.')
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown(' ')
+    st.markdown('#### Fonte de dados')
+    st.markdown('''
+    EF ENGLISH. English Proficiency Index. 2021. Página Download.
+    Disponível em : https://www.ef.com/wwen/epi/. Acesso em abril 2021.
     
+    HERITAGE. 2021 Index of Economic Freedom. 2021. Página explore the data.
+    Disponível em: https://www.heritage.org/index/ . Acesso em abril 2021.
+    ''')
     
 #Página 3
 if pag == 'Sobre os modelos e o produto final':
