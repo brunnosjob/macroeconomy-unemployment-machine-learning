@@ -301,6 +301,11 @@ if pag == 'Sobre o conjunto de dados':
 #Página 3
 if pag == 'Sobre os modelos e o produto final':
     st.title('Qualidade dos modelos')
+    st.markdown('__Antes de tudo... Importância de um modelo como esse__')
+    st.markdown('''Primeiramente, destaco que um modelo como esse, bem desenvolvido, pode auxiliar na tomada de decisão do Governo acerca 
+    do endividamento público, tendo em vista o possível impacto que o endividamento pode advir negativamente sobre a taxa de desemprego.
+    Além de questões de administração pública, um modelo como esse pode auxiliar em trabalhos acadêmicos, como a dissertação de um artigo científico,
+    o qual é útil para muitos fins políticos e jornalísticos.')
     st.markdown('### Como os modelos funcionam e o objetivo')
     st.markdown('''
     São dois modelos regressores conectados. O objetivo dessa conexão é prever/estimar a taxa de desemprego de um dado país (real ou fictício).
