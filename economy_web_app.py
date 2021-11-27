@@ -350,7 +350,7 @@ if pag == 'Sobre os modelos e o produto final':
     
     3 - Os resíduos devem ser independentes entre si.
     
-    4 - Homecedasticidade - em caso de modelos regressores múltiplos.
+    4 - Homecedasticidade.
     
     
     Se tratando de um modelo contando com apenas uma variável independente, o ponto 4 não é considerado. 
@@ -514,6 +514,16 @@ if pag == 'Sobre os modelos e o produto final':
     scatter_resid_unemp = Image.open('dist_resid_scatter_model_2.png')
     st.image(scatter_resid_unemp , use_column_width=True)
     
+    st.markdown('''
+    __Resultado para homocedasticidade:__ p de Goldfeld-Quandt: 0.14765
+    
+    Se p < 0,05, não há homocedasticidade;
+    
+    Se p >= 0,05, há homocedasticidade;
+    
+    Portanto, há homocedasticidade
+    ''')
+    
     st.markdown(' ')
     st.markdown(' ')    
     st.markdown(' ')
@@ -537,7 +547,9 @@ if pag == 'Sobre os modelos e o produto final':
                 
      2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos;
                 
-     3 - Os resíduos são independentes.
+     3 - Os resíduos são independentes;
+     
+     4 - Há homocedasticidade.
                 
      Há de se considerar que  o modelo linear explica cerca de 45.23% da variância da variável dependente a partir da variável independente.
      Esse é um valor de fraco para moderado.
