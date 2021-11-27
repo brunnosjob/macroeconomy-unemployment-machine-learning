@@ -276,158 +276,14 @@ if pag == 'Sobre os modelos e o produto final':
     st.markdown('__Antes de tudo... Importância de um modelo como esse__')
     st.markdown('''
     Primeiramente, destaco que um modelo como esse, bem desenvolvido, pode auxiliar na tomada de decisão do Governo acerca 
-    do endividamento público, tendo em vista o possível impacto que o endividamento pode advir negativamente sobre a taxa de desemprego.
+    da saúde fiscal, tendo em vista o possível impacto que essa variável pode advir negativamente sobre a taxa de desemprego.
     Além de questões de administração pública, um modelo como esse pode auxiliar em trabalhos acadêmicos, como a dissertação de um artigo científico,
     o qual é útil para fins políticos e jornalísticos.
     ''')
-    st.markdown('### Como os modelos funcionam e o objetivo')
-    st.markdown('''
-    Aquilo que tenho tratado como modelo, na verdade, são dois modelos regressores conectados. O objetivo dessa conexão é prever/estimar a taxa de desemprego de um dado país (real ou fictício).
-    O primeiro modelo estima a saúde fiscal do país a partir do percentual do PIB do país comprometido com a dívida pública do mesmo.
-    O segundo modelo recebe o valor da saúde fiscal, estimado pelo primeiro modelo, e estima a taxa de desemprego, que é o objetivo final.
-    ''')
+    
+    
 
-    
-    st.markdown('### Modelo para estimativa da saúde fiscal a partir do percentual do PIB comprometido para com a dívida pública')
-    
-    st.markdown('''
-    Inicio apresentando a comparação entre a linha de predição e a linha real. 
-    A linha de predição, em laranja, 
-    demonstra o desempenho do  modelo de predição de saúde fiscal, em relação aos dados de teste, os quais são representados pela linha azul.
-    As previsões são razoáveis em relação aos dados reais.''')
-    pred_debt_fiscal = Image.open('pred_debt_fiscal.png')
-    st.image(pred_debt_fiscal , use_column_width=True)
-    
-    st.markdown(' ')
-    st.markdown(' ')    
-    st.markdown(' ')
-    st.markdown(' ')  
-    
-    st.markdown('#### Estatísticas do desempenho do modelo em relação aos dados de teste')
-    
-    st.markdown('__Quantidade de variáveis independentes:__ 1')
-    st.markdown('__R²:__ 59,67%')
-    st.markdown('__Média residual:__ 0,033')
-    st.markdown('__Desvio padrão residual:__ 0,088')
-    st.markdown('__Erro quadrado médio:__ 0,009')
-    st.markdown(' ')
-    st.markdown(' ')
-    st.markdown(' ')
-    
-    st.markdown('#### Premissas para um modelo ser considerado adequado:')
-    st.markdown('''
-    1 - Distribuição normal dos resíduos;
-    
-    2 - Expecta-se que o resíduo seja igual a 0;
-    
-    3 - Os resíduos devem ser independentes entre si;
-    
-    4 - Homecedasticidade.
-    
-    
-    Se tratando de um modelo contando com apenas uma variável independente, o ponto 4 não é considerado. 
-    A partir das três primeiras, avalio a adequação dos dados para construição dos modelos.''')
-    st.markdown(' ')
-    st.markdown(' ')
-    st.markdown(' ')
-    
-    st.markdown('#### Distribuição do resíduo')
-    
-    dist_resid_model_1 = Image.open('dist_resid_model_1.png')
-    st.image(dist_resid_model_1 , use_column_width=True)  
-    st.markdown('De acordo com o teste de Shapiro-Wilk, a distribuição dos resíduos é normal. Observando o gráfico, pode-se notar essa evidência.')
-    st.markdown('''
-    Outro teste que confirma ou rejeita a normalidade é o teste de Jarque-Bera:
-    
-    __Jarque-Bera:__
-    
-    Para valores de p < 0,05 a normalidade é rejeitada.
-    
-    __Resultado de P de Jarque-Bera:__ 0.466
-        
-    Confirmada novamente a normalidade dos resíduos.
-    
-    Outro teste que pode confirmar a normalidade da distribuição dos resíduos e o teste de assimetria:
-    
-    __Fórmula Skewness:__
-    
-    Quanto mais próxima a zero, mais perfeita é a simetria, o que configura a normalidade. Para valor y > 0, existe uma assimetria positiva, e negativa para valor y < 0.
-    
-    __Resultado para Skewness:__ 0,808.
-    
-    A normalidade da distribuição não é perfeita, apresentando uma assimetria positiva.
-    ''')
-    
-    st.markdown('''
-    Um último valor que evidencia mais informações é o valor da curtose.
-    
-    __Fórmula Curtose:__
-    
-    A curtose de uma distribuição normal é 3. Para valor y > 3 a distribuição é mais “alta” que a distribuição normal e para valor y < 3, mais “achatada”.
-    
-    __Resultado para Curtose:__ 0,063
-    
-    A curva normal do resíduo do modelo é mais achatada do que a curva da perfeita curva normal.
-    ''')
-    
-    st.markdown(' ')
-    st.markdown(' ')
-    st.markdown(' ')
-    st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
-    
-    scatter_resid_fiscal = Image.open('111.png')
-    st.image(scatter_resid_fiscal , use_column_width=True)
-    
-    st.markdown(' ')
-    st.markdown(' ')    
-    
-    st.markdown('''
-    __Resultado para homocedasticidade:__ p de Goldfeld-Quandt: 5.250396481656635e-05
-    
-    Se p < 0,05, não há homocedasticidade;
-    
-    Se p >= 0,05, há homocedasticidade;
-    
-    Portanto, não há homocedasticidade.
-    ''')
-    
-    st.markdown(' ')
-    st.markdown(' ')    
-    st.markdown(' ')
-    st.markdown(' ')  
-    
-    st.markdown('Por fim, apresento o gráfico de lineariedade entre a variável Public Debt (% of GDP) e Fiscal Health.')
-    
-    scttr_pub_fiscal = Image.open('sctrr_pub_fiscal.png')
-    st.image(scttr_pub_fiscal, use_column_width=True)
-    
-    st.markdown(' ')
-    st.markdown(' ')    
-    st.markdown(' ')
-    st.markdown(' ') 
-    
-    st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
-    st.markdown('''
-    O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
-                
-     1 - Os resíduos apresentam distribuição normal;
-                
-     2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
-                
-     3 - Os resíduos são independentes;
-     
-     4 - Não há homocedasticidade.
-                
-     Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
-     Esse é um valor moderado.
-     ''')
-    
-    st.markdown(' ')
-    st.markdown(' ')    
-    st.markdown(' ')
-    st.markdown(' ') 
-
-    st.markdown('### Modelo para estimativa da taxa de desemprego a partir do percentual da estimada saúde fiscal')
+    st.markdown('### Modelo para estimativa da taxa de desemprego a partir do percentual que representa a saúde fiscal')
     
     st.markdown('''
     Inicio apresentando a comparação entre a linha de predição e a linha real. 
@@ -496,10 +352,21 @@ if pag == 'Sobre os modelos e o produto final':
     st.markdown(' ')
     st.markdown(' ')
     st.markdown(' ')
-    st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
+    st.markdown('O gráfico a seguir evidencia a suposta dependência dos resíduos, porquanto, o gráfico não apresenta uma distribuição uniforme em torno de zero.')
     
     scatter_resid_unemp = Image.open('222.png')
     st.image(scatter_resid_unemp , use_column_width=True)
+    
+    st.markdown('''
+    __Testando a independência dos resíduos__
+    
+    __Resultado para independência dos resíduos:__ Durbin-Watson = 0,94333
+    
+    Uma regra geral seguida é que os valores estatísticos do teste Durbin-Watson na faixa de 1,5 a 2,5 são relativamente aceitáveis. 
+    Valores fora desse intervalo podem ser motivos de preocupação. Valores abaixo de 1 ou acima de 3 são um motivos definitivos de preocupação.
+    O valor retornado é aproximadamente 0,943. Esse é um valor inferior a 1, portanto, é um valor definitivamente preocupante, evidenciando correlação positiva entre os resíduos.
+    O teste evidencia que não há independência dos resíduos.
+    ''')
     
     st.markdown('''
     __Resultado para homocedasticidade:__ p de Goldfeld-Quandt: 0.14765
@@ -528,19 +395,18 @@ if pag == 'Sobre os modelos e o produto final':
     
     st.markdown('#### Conclusão acerca do modelo preditivo para Fiscal Health (saúde fiscal)')
     st.markdown('''
-    O modelo gera resíduos que cumprem com as premissas de um bom modelo estimador:
+    O modelo gera resíduos que cumprem com a maioria das premissas de um bom modelo linear:
                 
      1 - Os resíduos apresentam distribuição normal;
                 
      2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos;
                 
-     3 - Os resíduos são independentes;
+     3 - Os resíduos não são independentes;
      
-     4 - Há homocedasticidade.
+     4 - A variância dos resíduos é constante para cada valor condicional de X, ou seja, há homocedasticidade.
                 
-     Há de se considerar que  o modelo linear explica cerca de 45.23% da variância da variável dependente a partir da variável independente.
-     Esse é um valor de fraco para moderado.
-     ''')
+     Esse modelo é um estimador com qualidade moderada, não cumprindo com a premissa de independência dos resíduos. 
+     As premissas de linearidade, normalidade da distribuição dos erros e de homocedasticidade são cumpridas.''')
     
     st.markdown(' ')
     st.markdown(' ')    
@@ -549,14 +415,10 @@ if pag == 'Sobre os modelos e o produto final':
 
     st.markdown('### Alerta sobre o desempenho do modelo')
     st.markdown('''
-    __O modelo final__, que é a conexão entre os dois modelos,
-    __é simplório para abarcar a complexidade econômica__, 
+    __O modelo é simplório para abarcar a complexidade econômica__, 
     porém, apresentou consideráveis aproximações aos dados reais em diferentes testes. 
-    No entanto, __o modelo não tem bom ou razoável desempenho com dados de países em enfáticas crises
-    ou países em contextos que exógenas significativas tornam esses mesmos países em países com dados/informações 
-    fora do padrão aprendido pelo modelo__. Esses tipos de dados são outliers dentro da base de dados usadas para desenvolver o modelo.
     
     __O produto final é uma demonstração__ de um produto de machine learning voltado para as Ciências Econômicas. 
     Portanto, __esse é um produto de portfólio, e não cumpre com o rigor que um modelo econométrico deve de fato ter__, 
-    ainda que tenha sido razoável e tenha sido bom em diferentes testes e cenários preditivos, com exceção, como já dito, daquilo considerado outlier dentro da base de dados.
+    ainda que tenha sido razoável e tenha sido bom em diferentes testes e cenários preditivos.
     ''')
