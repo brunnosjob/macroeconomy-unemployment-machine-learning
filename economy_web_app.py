@@ -5,15 +5,9 @@
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-from sklearn.tree import DecisionTreeRegressor
 import streamlit as st
 from PIL import Image
 import pickle
-
-
-#Buscando modelo de previsão de Saúde Fiscal
-#with open('simple_health_fiscal_tree.pkl', 'rb') as f:
- #   tree_model_fiscal = pickle.load(f)
     
 #Buscando modelo de previsão de taxa de desemprego
 with open('unemployment_simple_lm.pkl', 'rb') as f:
@@ -62,10 +56,10 @@ if pag == 'Interagir com o modelo':
     st.markdown('''
     
     1 - Você deve preencher os espaços, sendo dois deles opcionais.
-    No espaço em que pede para insirir o percentual (%) do PIB comprometido com a dívida pública, você deve preencher com um valor percentual de 0 a 100.
+    No espaço em que pede para insirir a saúde fiscal com valores percentuais, você deve preencher com um valor percentual de 0 a 100.
     Não se deve colocar o símbolo de porcentagem (%).
     O valor colocado por si só representa o percentual, isso é,
-    o quanto do PIB de um dado país está comprometido com a dívida pública desse mesmo país;
+    a qualidade da saúde fiscal de um dado país (fictício ou real) em termos percentuais;
 
     2 - Você pode simplesmente inserir dados fictícios, dentro dos limites estabelecidos para a aplicação;
 
@@ -75,7 +69,7 @@ if pag == 'Interagir com o modelo':
     
     II - Pesquise sobre a quantidade de pessoas desse país disponível ao mercado de trabalho, estando empregada ou não;
 
-    III - Pesquise sobre o quanto do PIB desse país está comprometido com sua dívida pública.
+    III - Pesquise sobre a qualidade da saúde fiscal do país expressa em termos percentuais.
     O valor deve estar em porcentagem, quando for colocado no espaço de preenchimento, presente logo abaixo.
 
     III - Compare o resultado da predição acerca da taxa de desemprego com o valor real da taxa de desemprego
@@ -87,10 +81,6 @@ if pag == 'Interagir com o modelo':
     st.markdown(' ')
     st.markdown(' ')    
     st.markdown(' ') 
-
-    #Buscando modelo de predição de saúde fiscal
-    #with open('simple_health_fiscal_tree.pkl', 'rb') as f:
-     #   tree_model_fiscal = pickle.load(f)
     
     #Buscando modelo de previsão de taxa de desemprego
     with open('unemployment_simple_lm.pkl', 'rb') as f:
@@ -149,19 +139,11 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ') 
     
     st.markdown('#### Correlações antes da retirada de outliers')
-    st.markdown('Antes de a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
+    st.markdown('Antes de a retirada de outliers, as principais correlações com a variável Unemployment (taxa de desemprego) eram:')
     corr_min = Image.open('corr_min.png')
     st.image(corr_min, use_column_width=True)
     st.markdown('''
     As principais correlações eram:
-    
-    #### Para com a variável dependente Fiscal Health:
-    
-    Public Debt (% of GDP): -0,51;
-    
-    Trade Freedom: 0,6;
-    
-    Unemployment (%): -0,58.
     
     #### Para com a variável dependente Unemployment (%):
     
@@ -178,17 +160,11 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown('#### Correlações após retirada de outliers')
     
     
-    st.markdown('Após a retirada de outliers, as principais correlações com as variáveis Fiscal Health (saúde fiscal) e Unemployment (taxa de desemprego) eram:')
+    st.markdown('Após a retirada de outliers, as principais correlações com a variável Unemployment (taxa de desemprego) eram:')
     sem_out_corr = Image.open('sem_out_corr.png')
     st.image(sem_out_corr, use_column_width=True)
     st.markdown('''
     As principais correlações eram:
-    
-    #### Para com a variável dependente Fiscal Health:
-    
-    Public Debt (% of GDP): -0,58;
-    
-    Unemployment (%): -0,68.
     
     #### Para com a variável dependente Unemployment (%):
     
@@ -200,7 +176,7 @@ if pag == 'Sobre o conjunto de dados':
     st.markdown(' ')    
     st.markdown(' ')
     st.markdown(' ') 
-    st.markdown('''Como pode-se apreender, houve potencialização ente certas variáveis independentes e as variáveis dependentes, enquanto, 
+    st.markdown('''Como pode-se apreender, houve potencialização na correlação entre certas variáveis independentes e a variável dependente, enquanto, 
     em relação a outras independentes, houve enfraquecimento correlacional.''')
     
     st.markdown(' ')
