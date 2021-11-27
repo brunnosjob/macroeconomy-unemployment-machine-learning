@@ -89,8 +89,8 @@ if pag == 'Interagir com o modelo':
     st.markdown(' ') 
 
     #Buscando modelo de predição de saúde fiscal
-    with open('simple_health_fiscal_tree.pkl', 'rb') as f:
-        tree_model_fiscal = pickle.load(f)
+    #with open('simple_health_fiscal_tree.pkl', 'rb') as f:
+     #   tree_model_fiscal = pickle.load(f)
     
     #Buscando modelo de previsão de taxa de desemprego
     with open('unemployment_simple_lm.pkl', 'rb') as f:
@@ -110,16 +110,12 @@ if pag == 'Interagir com o modelo':
     ''', 0, 8000000000, 0)
 
     #Valor percentual da dívida pública
-    public_debt = st.number_input('Insira o percentual (%) do PIB comprometido com a dívida pública:', 0.0, 100.0, 0.0)
-
-    #Transformações e predição
-    debt = np.array(public_debt)
-    debt = debt.reshape(-1,1)
-    predicted_health_fiscal = tree_model_fiscal.predict(debt)
+    fiscal_health = st.number_input('Insira, em termos percentuais, a qualidade da saúde fiscal:', 0.0, 100.0, 0.0)
 
     #Predição de taxa de desemprego
     #Transformações e predição
-    X_log = np.log(predicted_health_fiscal)
+    fiscal_health = fiscal_health/100
+    X_log = np.log(health_fiscal)
     X_log = X_log.reshape(-1,1)
     unemployment = regressor_sim_log.predict(X_log)
     unemployment = np.round(unemployment, 3)
