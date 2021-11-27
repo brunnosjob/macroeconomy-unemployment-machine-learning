@@ -115,7 +115,7 @@ if pag == 'Interagir com o modelo':
     #Predição de taxa de desemprego
     #Transformações e predição
     fiscal_health = fiscal_health/100
-    X_log = np.log(health_fiscal)
+    X_log = np.log(fiscal_health)
     X_log = X_log.reshape(-1,1)
     unemployment = regressor_sim_log.predict(X_log)
     unemployment = np.round(unemployment, 3)
