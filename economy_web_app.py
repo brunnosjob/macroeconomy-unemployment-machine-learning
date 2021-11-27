@@ -408,6 +408,19 @@ if pag == 'Sobre os modelos e o produto final':
     
     st.markdown(' ')
     st.markdown(' ')    
+    
+    st.markdown('''
+    __Resultado para homocedasticidade:__ p de Goldfeld-Quandt: 5.250396481656635e-05
+    
+    Se p < 0,05, não há homocedasticidade;
+    
+    Se p >= 0,05, há homocedasticidade;
+    
+    Portanto, não há homocedasticidade.
+    ''')
+    
+    st.markdown(' ')
+    st.markdown(' ')    
     st.markdown(' ')
     st.markdown(' ')  
     
@@ -431,7 +444,7 @@ if pag == 'Sobre os modelos e o produto final':
                 
      3 - Os resíduos são independentes;
      
-     4 - Há homocedasticidade.
+     4 - Não há homocedasticidade.
                 
      Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
      Esse é um valor moderado.
@@ -523,7 +536,7 @@ if pag == 'Sobre os modelos e o produto final':
     
     Se p >= 0,05, há homocedasticidade;
     
-    Portanto, há homocedasticidade
+    Portanto, há homocedasticidade.
     ''')
     
     st.markdown(' ')
