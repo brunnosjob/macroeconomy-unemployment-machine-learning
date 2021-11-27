@@ -403,7 +403,7 @@ if pag == 'Sobre os modelos e o produto final':
     st.markdown(' ')
     st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
     
-    scatter_resid_fiscal = Image.open('scatter_resid_fiscal.png')
+    scatter_resid_fiscal = Image.open('111.png')
     st.image(scatter_resid_fiscal , use_column_width=True)
     
     st.markdown(' ')
@@ -526,7 +526,7 @@ if pag == 'Sobre os modelos e o produto final':
     st.markdown(' ')
     st.markdown('O gráfico a seguir evidencia a independência dos resíduos, porquanto, o gráfico não apresenta um padrão entre predição e resíduo.')
     
-    scatter_resid_unemp = Image.open('dist_resid_scatter_model_2.png')
+    scatter_resid_unemp = Image.open('222.png')
     st.image(scatter_resid_unemp , use_column_width=True)
     
     st.markdown('''
