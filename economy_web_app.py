@@ -110,7 +110,7 @@ if pag == 'Interagir com o modelo':
     ''', 0, 8000000000, 0)
 
     #Valor percentual da dívida pública
-    fiscal_health = st.number_input('Insira, em termos percentuais, a qualidade da saúde fiscal:', 0.0, 100.0, 0.1)
+    fiscal_health = st.number_input('Insira, em termos percentuais, a qualidade da saúde fiscal:', 0.0, 100.0, 0.01)
 
     #Predição de taxa de desemprego
     #Transformações e predição
