@@ -348,7 +348,7 @@ if pag == 'Sobre os modelos e o produto final':
     
     2 - Expecta-se que o resíduo seja igual a 0;
     
-    3 - Os resíduos devem ser independentes entre si.
+    3 - Os resíduos devem ser independentes entre si;
     
     4 - Homecedasticidade.
     
@@ -429,7 +429,9 @@ if pag == 'Sobre os modelos e o produto final':
                 
      2 - O erro quadrado médio é o menor dentre os modelos desenvolvidos, aproximando-se de 0;
                 
-     3 - Os resíduos são independentes.
+     3 - Os resíduos são independentes;
+     
+     4 - Há homocedasticidade.
                 
      Há de se considerar que  o modelo linear explica cerca de 59,67% da variância da variável dependente a partir da variável independente.
      Esse é um valor moderado.
