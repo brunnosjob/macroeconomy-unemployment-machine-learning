@@ -12,8 +12,8 @@ import pickle
 
 
 #Buscando modelo de previsão de Saúde Fiscal
-with open('simple_health_fiscal_tree.pkl', 'rb') as f:
-    tree_model_fiscal = pickle.load(f)
+#with open('simple_health_fiscal_tree.pkl', 'rb') as f:
+ #   tree_model_fiscal = pickle.load(f)
     
 #Buscando modelo de previsão de taxa de desemprego
 with open('unemployment_simple_lm.pkl', 'rb') as f:
