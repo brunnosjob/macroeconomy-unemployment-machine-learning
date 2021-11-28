@@ -23,7 +23,7 @@ st.markdown(' ')
 #Informações em sidebar
 #Sobre o artigo
 st.sidebar.subheader('Projeto de portfólio de Ciência de Dados')
-st.sidebar.markdown('Em breve haverá o artigo descrevendo o passo a passo do desenvolvimento do projeto. Aguarde!')
+st.sidebar.markdown("- [Artigo descrevendo o passo a passo do desenvolvimento do modelo de machine learning](https://br-cienciadedados.medium.com/projeto-de-machine-learning-iii-7960c6e0a6dc)")
 st.sidebar.markdown(' ')
 
 #Menu
