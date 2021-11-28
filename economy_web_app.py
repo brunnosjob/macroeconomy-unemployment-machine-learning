@@ -77,7 +77,7 @@ if pag == 'Interagir com o modelo':
     Essa é uma forma de saber a qualidade do modelo.
 
     4 - Você pode repetir o processo inúmeras vezes, inclusive, usar essa aplicação web para algum trabalho, desde que a mesma caiba em seu trabalha,
-    tendo em vista o que está ressaltado nas páginas __sobre o conjunto de dados__ e __sobre os modelos e o produto final__.''')
+    tendo em vista o que está ressaltado nas páginas __sobre o conjunto de dados__ e __sobre o modelo e o produto final__.''')
     st.markdown(' ')
     st.markdown(' ')    
     st.markdown(' ') 
