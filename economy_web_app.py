@@ -28,7 +28,7 @@ st.sidebar.markdown(' ')
 
 #Menu
 st.sidebar.title('Menu')
-pag = st.sidebar.selectbox('Selecione a página:', ['Interagir com o modelo', 'Sobre o conjunto de dados', 'Sobre os modelos e o produto final'])
+pag = st.sidebar.selectbox('Selecione a página:', ['Interagir com o modelo', 'Sobre o conjunto de dados', 'Sobre o modelo e o produto final'])
 st.sidebar.markdown(' ')
 
 #Redes sociais
@@ -271,7 +271,7 @@ if pag == 'Sobre o conjunto de dados':
     ''')
     
 #Página 3
-if pag == 'Sobre os modelos e o produto final':
+if pag == 'Sobre o modelo e o produto final':
     st.title('Qualidade dos modelos')
     st.markdown('__Antes de tudo... Importância de um modelo como esse__')
     st.markdown('''
