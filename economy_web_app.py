@@ -56,7 +56,7 @@ if pag == 'Interagir com o modelo':
     st.markdown('''
     
     1 - Você deve preencher os espaços, sendo dois deles opcionais.
-    No espaço em que pede para insirir a saúde fiscal com valores percentuais, você deve preencher com um valor percentual de 0 a 100.
+    No espaço em que pede para inserir a saúde fiscal com valores percentuais, você deve preencher com um valor percentual de 0 a 100.
     Não se deve colocar o símbolo de porcentagem (%).
     O valor colocado por si só representa o percentual, isso é,
     a qualidade da saúde fiscal de um dado país (fictício ou real) em termos percentuais;
